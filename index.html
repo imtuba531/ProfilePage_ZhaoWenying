@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>George</title>
+    <link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Aldrich&family=Black+Ops+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+		<div class="side-box">
+			<div class="default-view">
+				<h3>Contact</h3>
+			</div>
+			<div class="hover-view">
+			<p>+65 8079 3858</p>
+			<p>fengjixin531@gmail.com</p>
+			<p>Class 2-02, NYGH B28</p>
+			</div>
+		</div>
+        <div class="side-box">
+            <div class="default-view">
+                <h3>CCA</h3>
+            </div>
+            <div class="hover-view">
+                <img src="https://i.ibb.co/4R71m99R/Whats-App-Image-2026-06-15-at-17-37-12.jpg" alt="NYCB Screenshot">
+                <p>My CCA is Concert Band, and I'm in the Tuba section. We recently performed at the Esplanade with other Performing Arts CCAs, and I hope to become ABEL when I'm Sec 3.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-default">
+                <h1>Personal Information</h1>
+                <h2>Name: ZHAO WENYING</h2>
+                <h2>Birthday: 24 MAY (Gemini)</h2>
+				
+            </div>
+            <div class="card-hover">
+                <h2>More About Me</h2>
+                <p>Hi, I'm Wenying, but a lot of my friends call me 'Javier'. My hobbies include playing FPS games and rhythm games, as well as playing the ukulele. Some of the FPS games I play include Valorant and Shell Shockers, and I play Arcaea and Phigros on my phone. This is my first project using HTML and CSS.</p>
+            </div>
+        </div>
+
+        <div class="side-box">
+            <div class="default-view">
+                <h3>HCNY Astro</h3>
+            </div>
+            <div class="hover-view">
+                <img src="https://i.ibb.co/fV09LCcf/cf388ce7-48da-4097-a807-c766ab7f1d71.jpg" alt="Astronomy Camp 2026">
+                <p>Ever since I became part of HCNY Astro EXCO, Astronomy has meant a lot more to me than just an interest. The picture is from our collaboration with Raffles Institution earlier this year, with past students from my primary school, Nanyang Primary School. I even found my brother's past classmate there!</p>
+            </div>
+        </div>
+		<div class="side-box">
+			<div class="side-box" id="uke-card">
+			<div class="default-view">
+				<h3>Ukulele</h3>
+			</div>
+			<div class="hover-view">
+			<video id="uke-video" muted loop playsinline>
+				<source src="https://videotourl.com/videos/1781530172881-52bebde4-dc8b-4276-83e7-3bde981d3aaf.mp4" type="video/mp4">
+			</video>
+		<h3>Click to play audio!</h3>
+        <p>I picked up playing the ukulele in 2025, and self learnt quite a few songs. Including While My Guitar Gently Weeps by George Harrison arr. Jake Shimabukuro and Livin' on a prayer, which is a classic. I'm proud to call myself a member of the Chili Crab Ensemble by Interact Club of Sembawang, and I look forward to my musical journey.</p>
+    </div>
+</div>
+
+		</div>
+
+    </div>
+<script>
+    const ukeCard = document.getElementById('uke-card');
+    const video = document.getElementById('uke-video');
+
+
+    ukeCard.addEventListener('mouseenter', () => {
+        video.play().catch(error => console.log("Play interrupted:", error));
+    });
+
+    ukeCard.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+    });
+
+    video.addEventListener('click', (event) => {
+        event.stopPropagation();
+        
+        if (video.muted) {
+            video.muted = false;
+            console.log("Audio Unmuted!");
+        } else {
+            video.muted = true;
+            console.log("Audio Muted!");
+        }
+    });
+</script>
+
+
+</body>
+</html>

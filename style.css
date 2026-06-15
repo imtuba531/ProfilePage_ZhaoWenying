@@ -1,0 +1,112 @@
+@import url('https://googleapis.com');
+
+body {
+    font-family: "Black Ops One", system-ui;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+    min-height: 100vh;
+    background: #F7F1DE;
+    margin: 0;
+}
+
+.layout-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    width: fit-content;
+}
+
+.card, .side-box {
+    font-family: "Aldrich", system-ui;
+    padding: 20px;       
+    border-radius: 8px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    height: fit-content;     
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 300px;
+    background: #B0BA99;    
+}
+
+.side-box {
+    width: 150px;
+    background: #4E220F;     
+}
+
+.card h1, .card h2, .card h3, .card p {
+    color: #000000;     
+    margin: 10px 0;
+    word-wrap: break-word;
+}
+
+.side-box h1, .side-box h2, .side-box h3, .side-box p {
+    color: #FBF5DD;        
+    margin: 10px 0;
+    word-wrap: break-word;
+}
+
+.card p, .side-box p {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.side-box img {
+    width: 80%;
+    max-height: 110px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 0 auto 15px auto;
+    display: block;
+}
+
+.card-hover, .hover-view {
+    display: none;
+}
+
+.card:hover .card-default {
+    display: none;
+}
+
+.card:hover .card-hover {
+    display: block;
+}
+
+.side-box:hover .default-view {
+    display: none;
+}
+
+.side-box:hover .hover-view {
+    display: block;
+}
+	
+.side-box video {
+    width: 80%;
+    max-height: 110px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin: 0 auto 15px auto;
+    display: block;
+    cursor: pointer;
+	
+.card,
+.side-box {
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+.card:hover,
+.side-box:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+}
+}
+}
